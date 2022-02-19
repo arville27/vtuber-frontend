@@ -3,6 +3,8 @@ import { generateCard } from './util.js';
 const data = await fetch('/data/figure.json');
 const figures = await data.json();
 
+const cartDom = $('<div>', { class: 'material-icons card-carticon' }).text('shopping_cart');
+
 // Searchbar icon
 $('.search-closeicon')
     .css({ display: 'none', cursor: 'pointer', color: 'black' })
@@ -10,12 +12,14 @@ $('.search-closeicon')
         $('#searchbar').val('');
         $('.search-searchicon').css('display', 'block');
         $('.search-closeicon').css('display', 'none');
-        $('.card-container').append(figures.map((talent) => generateCard(talent.name, talent.img)));
+        $('.card-container').append(
+            figures.map((figure) => generateCard(figure.name, figure.img, [cartDom]))
+        );
     });
 
 $('.card-container').empty();
 
-$('.card-container').append(figures.map((talent) => generateCard(talent.name, talent.img)));
+$('.card-container').append(figures.map((figure) => generateCard(figure.name, figure.img, [cartDom])));
 
 $('#searchbar').keyup((e) => {
     const query = $(e.target).val();
@@ -24,7 +28,7 @@ $('#searchbar').keyup((e) => {
     $('.card-container').empty();
     $('.card-container').append(
         figures
-            .filter((talent) => talent.name.includes(query))
-            .map((talent) => generateCard(talent.name, talent.img))
+            .filter((figure) => figure.name.includes(query))
+            .map((figure) => generateCard(figure.name, figure.img, [cartDom]))
     );
 });

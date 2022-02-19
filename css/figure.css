@@ -54,6 +54,14 @@
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: 2vw black;
+    position: relative;
+}
+
+.card-carticon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
 }
 
 .card-pict {
