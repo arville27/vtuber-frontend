@@ -109,7 +109,7 @@ body {
 @media (max-width: 700px) {
     .header {
         position: absolute;
-        inset: 0;
+        inset: 0 0 auto;
     }
 
     .navigation-parent-container {
