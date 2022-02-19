@@ -14,19 +14,12 @@ $('select').change(() => {
     const gen = parseInt($('select#generation').val());
     const nation = $('select#nationality').val();
     $('.card-container').empty();
-    if (nation === 'all') {
-        $('.card-container').append(
-            allTalents
-                .filter((talent) => gen === 0 || talent.gen === gen)
-                .map((talent) => generateTalentCard(talent.name, talent.img))
-        );
-    } else {
-        $('.card-container').append(
-            talents[nation].talents
-                .filter((talent) => gen === 0 || talent.gen === gen)
-                .map((talent) => generateTalentCard(talent.name, talent.img))
-        );
-    }
+    const listTalents = nation === 'all' ? allTalents : talents[nation].talents;
+    $('.card-container').append(
+        listTalents
+            .filter((talent) => gen === 0 || talent.gen === gen)
+            .map((talent) => generateTalentCard(talent.name, talent.img))
+    );
 });
 
 /**
