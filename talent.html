@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/talent.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+        <script src="js/nav.js" defer></script>
+        <script type="module" src="js/talent.js" defer></script>
+        <title>VTUBER - Talent</title>
+    </head>
+    <body>
+        <header class="header fixed-relative-header">
+            <div class="navigation-parent-container">
+                <div class="logo-container">
+                    <img class="logo" src="/assets/Logo.png" alt="Logo" />
+                </div>
+                <span id="mobile-menu-toggle" class="material-icons mobile-menu-toggle"> menu </span>
+                <nav>
+                    <ul data-visible="false" id="navigation" class="navigation">
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a class="active" href="/talent.html">TALENT</a></li>
+                        <li><a href="/figure.html">FIGURE</a></li>
+                        <li><a href="#">MERCHANDISE</a></li>
+                        <li><a href="#">CART</a></li>
+                    </ul>
+                </nav>
+                <div class="dropdown-menu-container">
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Shirt</a></li>
+                        <li><a href="#">Poster</a></li>
+                        <li><a href="#">Audio pack</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <content class="container">
+            <div class="filter-section">
+                <div class="filter-left">
+                    <span>Generation</span>
+                    <select class="select" name="generation" id="generation">
+                        <option value="0" selected>All</option>
+                        <option value="1">First generation</option>
+                        <option value="2">Second generation</option>
+                        <option value="3">Third generation</option>
+                        <option value="4">Fourth generation</option>
+                    </select>
+                </div>
+                <div class="filter-right">
+                    <span>Region</span>
+                    <select class="select" name="nationality" id="nationality">
+                        <option value="all" selected>All</option>
+                        <option value="en">EN</option>
+                        <option value="id">ID</option>
+                        <option value="jp">JP</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="talent-container">
+                <div class="title"><h2>Top Search</h2></div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-pict-container">
+                            <img class="card-pict" src="/assets/en/gura.webp" alt="Ame" />
+                        </div>
+                        <div class="card-details">Nama Panjang</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-pict-container">
+                            <img class="card-pict" src="/assets/en/gura.webp" alt="Ame" />
+                        </div>
+                        <div class="card-details">Nama Panjang</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-pict-container">
+                            <img class="card-pict" src="/assets/en/gura.webp" alt="Ame" />
+                        </div>
+                        <div class="card-details">Nama Panjang</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-pict-container">
+                            <img class="card-pict" src="/assets/en/gura.webp" alt="Ame" />
+                        </div>
+                        <div class="card-details">Nama Panjang</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-pict-container">
+                            <img class="card-pict" src="/assets/en/gura.webp" alt="Ame" />
+                        </div>
+                        <div class="card-details">Nama Panjang</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-pict-container">
+                            <img class="card-pict" src="/assets/en/gura.webp" alt="Ame" />
+                        </div>
+                        <div class="card-details">Nama Panjang</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-pict-container">
+                            <img class="card-pict" src="/assets/en/gura.webp" alt="Ame" />
+                        </div>
+                        <div class="card-details">Nama Panjang</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-pict-container">
+                            <img class="card-pict" src="/assets/en/gura.webp" alt="Ame" />
+                        </div>
+                        <div class="card-details">Nama Panjang</div>
+                    </div>
+                </div>
+            </div>
+        </content>
+
+        <footer class="footer">
+            <div class="socmed-container">
+                <a href="https://www.instagram.com/hololive.id/?hl=id">
+                    <img class="socmed-icon" src="./assets/SocialMedia/instagram.png" alt="" />
+                </a>
+                <a href="https://twitter.com/hololive_id">
+                    <img class="socmed-icon" src="./assets/SocialMedia/twitter.png" alt="" />
+                </a>
+                <a
+                    href="https://www.facebook.com/pages/category/Entertainment-website/Hololive-Indonesia-108806367277672/"
+                >
+                    <img class="socmed-icon" src="./assets/SocialMedia/facebook.png" alt="" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCfrWoRGlawPQDQxxeIDRP0Q">
+                    <img class="socmed-icon" src="./assets/SocialMedia/youtube.png" alt="" />
+                </a>
+            </div>
+            <div class="disclaimer">&copy; 2022 COVER Corp. All Rights Reserved</div>
+        </footer>
+    </body>
+</html>

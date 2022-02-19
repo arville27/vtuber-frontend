@@ -1,0 +1,95 @@
+{
+    "id": {
+        "talents": [
+            {
+                "name": "Airani Iofifteen",
+                "img": "assets/id/airani.webp",
+                "gen": 1
+            },
+            {
+                "name": "Moona Hoshinova",
+                "img": "assets/id/moona.webp",
+                "gen": 1
+            },
+            {
+                "name": "Ayunda Risu",
+                "img": "assets/id/risu.webp",
+                "gen": 1
+            },
+            {
+                "name": "Kureiji Ollie",
+                "img": "assets/id/ollie.webp",
+                "gen": 2
+            },
+            {
+                "name": "Anya Melfissa",
+                "img": "assets/id/anya.webp",
+                "gen": 2
+            },
+            {
+                "name": "Pavolia Reine",
+                "img": "assets/id/reine.webp",
+                "gen": 2
+            }
+        ]
+    },
+    "en": {
+        "talents": [
+            {
+                "name": "Mori Calliope",
+                "img": "assets/en/mori.webp",
+                "gen": 1
+            },
+            {
+                "name": "Takanashi Kiara",
+                "img": "assets/en/kiara.webp",
+                "gen": 1
+            },
+            {
+                "name": "Ninomae Ina'nis",
+                "img": "assets/en/ina.webp",
+                "gen": 1
+            },
+            {
+                "name": "Gawr Gura",
+                "img": "assets/en/gura.webp",
+                "gen": 1
+            },
+            {
+                "name": "Amelia Watson",
+                "img": "assets/en/ame.webp",
+                "gen": 1
+            },
+            {
+                "name": "IRyS",
+                "img": "assets/en/irys.webp",
+                "gen": 2
+            },
+            {
+                "name": "Tsukumo Sana",
+                "img": "assets/en/sana.webp",
+                "gen": 2
+            },
+            {
+                "name": "Ceres Fauna",
+                "img": "assets/en/fauna.webp",
+                "gen": 2
+            },
+            {
+                "name": "Ouro Kronii",
+                "img": "assets/en/kronii.webp",
+                "gen": 2
+            },
+            {
+                "name": "Nanashi Mumei",
+                "img": "assets/en/mumei.webp",
+                "gen": 2
+            },
+            {
+                "name": "Hakoz Baels",
+                "img": "assets/en/bae.webp",
+                "gen": 2
+            }
+        ]
+    }
+}

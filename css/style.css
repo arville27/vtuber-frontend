@@ -1,0 +1,188 @@
+:root {
+    --color-dark: #201f26;
+    --color-neutral: #161616;
+    --color-white: white;
+    --color-green: #68dfd4;
+    --color-blue: #4a85eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* min-height: 10vh; */
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Utility */
+.active {
+    color: #49c8f1 !important;
+}
+
+/* Header */
+.navigation-parent-container {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-dark);
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    transition: background-color 250ms linear;
+}
+
+.trans-on-scroll {
+    background-color: transparent;
+}
+
+.logo {
+    width: 4rem;
+    margin-block: 0.5rem;
+    margin-left: 1rem;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    margin-right: 3vw;
+    z-index: 1000;
+}
+
+.navigation[data-visible='true'] {
+    transform: translateX(0%);
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+}
+
+.dropdown-menu-container {
+    position: fixed;
+    top: 3.7rem;
+    right: 6.3rem;
+    background-color: var(--color-dark);
+    display: none;
+    transform: translateY(-100%);
+    transition: transform 350ms ease-out;
+    border-radius: 10px;
+}
+
+.dropdown-menu-container[data-visible='true'] {
+    transform: translateY(0%);
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-top: 0.75rem;
+}
+
+.dropdown-menu a {
+    padding: 0.5em 2.5em;
+    display: block;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+}
+
+.dropdown-menu a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .header {
+        position: absolute;
+        inset: 0;
+    }
+
+    .navigation-parent-container {
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .transparent {
+        background-color: transparent;
+    }
+
+    .logo-container {
+        align-self: flex-end;
+        margin-right: 1.4rem;
+    }
+
+    .logo {
+        width: 3em;
+    }
+
+    .navigation {
+        position: fixed;
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+        padding-top: 5rem;
+        gap: 2rem;
+        margin: 0;
+        right: 45%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        font-size: 4vw;
+        background-color: var(--color-neutral);
+        transform: translateX(-100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .navigation a {
+        font-size: 0.8em;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        left: 1.4rem;
+        top: 1rem;
+        padding: 0.2em;
+        cursor: pointer;
+        z-index: 1001;
+        font-size: 1.5em;
+        background-color: var(--color-white);
+    }
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2rem;
+    gap: 0.8rem;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.socmed-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.socmed-icon {
+    aspect-ratio: 1;
+    width: 5vh;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+        <script src="js/nav.js" defer></script>
+        <script src="js/index.js" defer></script>
+        <title>VTUBER</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="navigation-parent-container transparent">
+                <div class="logo-container">
+                    <img class="logo" src="/assets/Logo.png" alt="Logo" />
+                </div>
+                <span id="mobile-menu-toggle" class="material-icons mobile-menu-toggle"> menu </span>
+                <nav>
+                    <ul data-visible="false" id="navigation" class="navigation">
+                        <li><a class="active" href="/index.html">HOME</a></li>
+                        <li><a href="/talent.html">TALENT</a></li>
+                        <li><a href="/figure.html">FIGURE</a></li>
+                        <li><a href="#">MERCHANDISE</a></li>
+                        <li><a href="#">CART</a></li>
+                    </ul>
+                </nav>
+                <div class="dropdown-menu-container">
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Shirt</a></li>
+                        <li><a href="#">Poster</a></li>
+                        <li><a href="#">Audio pack</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <content>
+            <!-- be part of us -->
+            <div class="bepartofus">
+                <div class="bepartofus-text">
+                    <div class="title-partofus">Be a Part of Us!</div>
+
+                    <div class="desc-partofus">
+                        <p>
+                            VTuber is opening an audition which run for 2 weeks since January 14th, 2022. We
+                            are looking for attractive and creative VTuber. We are waiting for your
+                            participation!
+                        </p>
+                    </div>
+
+                    <!-- progress bar -->
+                    <div class="progress-bar">
+                        <div class="progress">
+                            <div class="progress-indicator">1</div>
+                            <div class="progress-text">Register Yourself</div>
+                        </div>
+                        <div class="progress progress-line">
+                            <div class="progress-indicator">2</div>
+                            <div class="progress-text">Document Verification</div>
+                        </div>
+                        <div class="progress progress-line">
+                            <div class="progress-indicator">3</div>
+                            <div class="progress-text">Interview</div>
+                        </div>
+                        <div class="progress progress-line">
+                            <div class="progress-indicator">4</div>
+                            <div class="progress-text">Become VTUBER</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-partofus">
+                    <img src="./assets/vtuber-audition.png" alt="" />
+                    <button class="apply-here">Apply Here</button>
+                </div>
+            </div>
+
+            <!-- our activity -->
+            <div class="our-activity-container">
+                <div class="title-our-activity">
+                    <span>Our Activity</span>
+                </div>
+
+                <div class="video-slider">
+                    <span class="material-icons video">arrow_back_ios_new</span>
+                    <!-- <div class="video-item">
+                        <video src="./assets/video-1.mp4" controls></video>
+                    </div> -->
+                    <div class="video-item">
+                        <video src="./assets/video-2.mp4" autoplay muted></video>
+                    </div>
+                    <!-- <div class="video-item">
+                        <video src="./assets/video-3.mp4" autoplay muted></video>
+                    </div> -->
+                    <span class="material-icons video">arrow_forward_ios</span>
+                </div>
+            </div>
+
+            <!-- bagian ads -->
+            <div class="sale-container">
+                <div class="sale-item">
+                    <img class="sale-image" src="/assets/nendoroid.jpg" alt="" />
+                </div>
+
+                <div class="title-sale">
+                    YEAR
+                    <br />
+                    END
+                    <br />
+                    SALE
+                </div>
+
+                <div class="title-sale-information">
+                    Special Offer <br />
+                    Only For You
+                </div>
+
+                <div class="sale-percentage">80%<br />OFF</div>
+            </div>
+
+            <!-- video promosi -->
+            <div class="main-video-container">
+                <video class="main-video" autoplay muted loop>
+                    <source src="./assets/pv.mp4" type="video/mp4" />
+                </video>
+                <div class="main-video-text">
+                    <div class="tittle-about-us">
+                        <span>About Us</span>
+                    </div>
+                    <div class="desc-about-us">
+                        <p>
+                            VTuber is a Virtual Talent Agency consisting of Virtual Youtubers owned by
+                            Japanese Tech entertainment company Cover Corporation
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </content>
+
+        <footer class="footer">
+            <div class="socmed-container">
+                <a href="https://www.instagram.com/hololive.id/?hl=id">
+                    <img class="socmed-icon" src="./assets/SocialMedia/instagram.png" alt="" />
+                </a>
+                <a href="https://twitter.com/hololive_id">
+                    <img class="socmed-icon" src="./assets/SocialMedia/twitter.png" alt="" />
+                </a>
+                <a
+                    href="https://www.facebook.com/pages/category/Entertainment-website/Hololive-Indonesia-108806367277672/"
+                >
+                    <img class="socmed-icon" src="./assets/SocialMedia/facebook.png" alt="" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCfrWoRGlawPQDQxxeIDRP0Q">
+                    <img class="socmed-icon" src="./assets/SocialMedia/youtube.png" alt="" />
+                </a>
+            </div>
+            <div class="disclaimer">&copy; 2022 COVER Corp. All Rights Reserved</div>
+        </footer>
+    </body>
+</html>
