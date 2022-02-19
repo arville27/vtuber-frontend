@@ -32,3 +32,8 @@ $('#searchbar').keyup((e) => {
             .map((figure) => generateCard(figure.name, figure.img, [cartDom]))
     );
 });
+
+// Cart icon
+$('.card-carticon').click((e) => {
+    const card = $(e.target.parentElement);
+});
