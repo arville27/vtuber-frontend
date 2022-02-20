@@ -13,13 +13,15 @@ $('.search-closeicon')
         $('.search-searchicon').css('display', 'block');
         $('.search-closeicon').css('display', 'none');
         $('.card-container').append(
-            figures.map((figure) => generateCard(figure.name, figure.img, [cartDom]))
+            figures.map((figure) => generateCard(figure.name, '/assets/nendoroid.png', [cartDom]))
         );
     });
 
 $('.card-container').empty();
 
-$('.card-container').append(figures.map((figure) => generateCard(figure.name, figure.img, [cartDom])));
+$('.card-container').append(
+    figures.map((figure) => generateCard(figure.name, '/assets/nendoroid.png', [cartDom]))
+);
 
 $('#searchbar').keyup((e) => {
     const query = $(e.target).val();
@@ -29,7 +31,7 @@ $('#searchbar').keyup((e) => {
     $('.card-container').append(
         figures
             .filter((figure) => figure.name.includes(query))
-            .map((figure) => generateCard(figure.name, figure.img, [cartDom]))
+            .map((figure) => generateCard(figure.name, '/assets/nendoroid.png', [cartDom]))
     );
 });
 
