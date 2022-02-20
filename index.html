@@ -86,17 +86,19 @@
                 </div>
 
                 <div class="video-slider">
-                    <span class="material-icons video">arrow_back_ios_new</span>
-                    <!-- <div class="video-item">
-                        <video src="./assets/video-1.mp4" controls></video>
-                    </div> -->
-                    <div class="video-item">
-                        <video src="./assets/video-2.mp4" autoplay muted></video>
+                    <span id="slider-prev" class="material-icons video">arrow_back_ios_new</span>
+                    <div class="video-container">
+                        <div class="video-item">
+                            <video src="./assets/video-1.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="video-item active-video">
+                            <video src="./assets/video-2.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="video-item">
+                            <video src="./assets/video-3.mp4" autoplay muted loop></video>
+                        </div>
                     </div>
-                    <!-- <div class="video-item">
-                        <video src="./assets/video-3.mp4" autoplay muted></video>
-                    </div> -->
-                    <span class="material-icons video">arrow_forward_ios</span>
+                    <span id="slider-next" class="material-icons video">arrow_forward_ios</span>
                 </div>
             </div>
 
