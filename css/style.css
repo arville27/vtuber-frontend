@@ -13,6 +13,13 @@
     /* min-height: 10vh; */
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 body {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -109,7 +116,7 @@ body {
 @media (max-width: 700px) {
     .header {
         position: absolute;
-        inset: 0;
+        inset: 0 0 auto;
     }
 
     .navigation-parent-container {
