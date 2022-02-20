@@ -28,13 +28,50 @@
 }
 
 /* Card card an */
-.figure-container {
+.parent-merch-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.merch-tab-container {
+    display: flex;
+    flex: 1;
+    padding-inline: 20%;
+}
+
+.tab-item-container {
+    text-align: center;
+    width: 100%;
+}
+
+.tab-item {
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tab-item::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-top: 0.4em;
+    background-color: black;
+}
+
+.tab-item.active-tab::after {
+    background-color: #49c8f1;
+}
+
+.merch-container {
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: #49c8f1;
+    padding: 2rem;
     gap: 3vh;
-    padding-block: 2rem;
     min-height: 60vh;
 }
 
@@ -63,6 +100,9 @@
     top: 1rem;
     right: 1rem;
     cursor: pointer;
+    padding: 0.3em;
+    border-radius: 50%;
+    background-color: var(--color-green);
 }
 
 .card-pict {
@@ -80,6 +120,10 @@
 }
 
 @media (max-width: 700px) {
+    .merch-tab-container {
+        padding-inline: 5%;
+    }
+
     .filter-section {
         padding: 7rem 10vw 3rem;
     }

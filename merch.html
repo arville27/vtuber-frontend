@@ -7,10 +7,10 @@
         <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/figure.css" />
+        <link rel="stylesheet" href="css/merch.css" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
         <script src="js/nav.js" defer></script>
-        <script type="module" src="js/figure.js" defer></script>
+        <script type="module" src="js/merch.js" defer></script>
         <title>VTUBER - Figure</title>
     </head>
     <body>
@@ -24,8 +24,8 @@
                     <ul data-visible="false" id="navigation" class="navigation">
                         <li><a href="/index.html">HOME</a></li>
                         <li><a href="/talent.html">TALENT</a></li>
-                        <li><a class="active" href="/figure.html">FIGURE</a></li>
-                        <li><a href="/merch.html">MERCHANDISE</a></li>
+                        <li><a href="/figure.html">FIGURE</a></li>
+                        <li><a class="active" href="/merch.html">MERCHANDISE</a></li>
                         <li><a href="/cart.html">CART</a></li>
                     </ul>
                 </nav>
@@ -48,19 +48,34 @@
                 </div>
             </div>
 
-            <div class="figure-container">
-                <div class="title"><h2>Figures & Nendoroids</h2></div>
-                <div class="card-container">
-                    <div class="card">
-                        <div class="card-pict-container">
-                            <img class="card-pict" src="/assets/figure/Kagura_Nana.jpg" alt="Kagura Nana" />
+            <div class="parent-merch-container">
+                <div class="merch-tab-container">
+                    <div type="all" class="tab-item-container">
+                        <span class="tab-item active-tab">All</span>
+                    </div>
+                    <div type="shirt" class="tab-item-container shirts">
+                        <span class="tab-item"> Shirts </span>
+                    </div>
+                    <div type="audio" class="tab-item-container audiopacks">
+                        <span class="tab-item"> Audio Packs </span>
+                    </div>
+                    <div type="poster" class="tab-item-container poster">
+                        <span class="tab-item"> Poster </span>
+                    </div>
+                </div>
+                <div class="merch-container">
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-pict-container">
+                                <img class="card-pict" src="/assets/en/gura.webp" alt="Ame" />
+                            </div>
+                            <div class="card-details">
+                                <div class="item-name">Item Name</div>
+                                <div class="item-type">Type</div>
+                                <div class="item-price">Price</div>
+                            </div>
+                            <div class="material-icons card-carticon">shopping_cart</div>
                         </div>
-                        <div class="card-details">
-                            <div class="item-name">Item Name</div>
-                            <div class="item-type">Type</div>
-                            <div class="item-price">Price</div>
-                        </div>
-                        <div class="material-icons card-carticon">shopping_cart</div>
                     </div>
                 </div>
             </div>

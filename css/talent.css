@@ -31,7 +31,7 @@
     background-color: #49c8f1;
     gap: 3vh;
     padding-block: 2rem;
-    /* min-height: 60vh; */
+    min-height: 60vh;
 }
 
 .card-container {

@@ -1,0 +1,212 @@
+{
+    "poster": [
+        {
+            "id": "merch1",
+            "name": "Summer Picnic 2022",
+            "price": 500000,
+            "img": "assets/poster/poster 1.png"
+        },
+        {
+            "id": "merch2",
+            "name": "Summer Festival",
+            "price": 800000,
+            "img": "assets/poster/poster 2.png"
+        },
+        {
+            "id": "merch3",
+            "name": "Boys Days Out",
+            "price": 750000,
+            "img": "assets/poster/poster 3.png"
+        },
+        {
+            "id": "merch4",
+            "name": "ID Gathering Special",
+            "price": 500000,
+            "img": "assets/poster/poster 4.png"
+        },
+        {
+            "id": "merch5",
+            "name": "New Year Barbeque",
+            "price": 600000,
+            "img": "assets/poster/poster 5.png"
+        },
+        {
+            "id": "merch6",
+            "name": "Ice Cream Date",
+            "price": 925000,
+            "img": "assets/poster/poster 6.png"
+        },
+        {
+            "id": "merch7",
+            "name": "Gawr Gura",
+            "price": 800000,
+            "img": "assets/poster/poster 7.png"
+        },
+        {
+            "id": "merch8",
+            "name": "5th Gen JP Gathering",
+            "price": 650000,
+            "img": "assets/poster/poster 8.png"
+        },
+        {
+            "id": "merch9",
+            "name": "Cafe Gathering",
+            "price": 700000,
+            "img": "assets/poster/poster 9.png"
+        },
+        {
+            "id": "merch10",
+            "name": "Summer Break",
+            "price": 1000000,
+            "img": "assets/poster/poster 10.png"
+        }
+    ],
+    "shirt": [
+        {
+            "id": "merch11",
+            "name": "Anya Melfissa Shirt",
+            "price": 450000,
+            "img": "assets/shirt/anya shirt.png"
+        },
+        {
+            "id": "merch12",
+            "name": "Azki Shirt",
+            "price": 350000,
+            "img": "assets/shirt/azki shirt.png"
+        },
+        {
+            "id": "merch13",
+            "name": "Gura Gawr Cosplay",
+            "price": 750000,
+            "img": "assets/shirt/Gura Gawr Cosplay.png"
+        },
+        {
+            "id": "merch14",
+            "name": "Gura Gawr Shirt",
+            "price": 250000,
+            "img": "assets/shirt/Gura Gawr.png"
+        },
+        {
+            "id": "merch15",
+            "name": "Kureiji Ollie Shirt",
+            "price": 350000,
+            "img": "assets/shirt/kureiji shirt.png"
+        },
+        {
+            "id": "merch16",
+            "name": "Momosuzu Nene Shirt",
+            "price": 500000,
+            "img": "assets/shirt/nene shirt.png"
+        },
+        {
+            "id": "merch17",
+            "name": "Rikka Shirt",
+            "price": 350000,
+            "img": "assets/shirt/rikka shirt.png"
+        },
+        {
+            "id": "merch18",
+            "name": "Inugami korone meme Shirt",
+            "price": 450000,
+            "img": "assets/shirt/shirt 3.png"
+        },
+        {
+            "id": "merch19",
+            "name": "Kishido Temma Shirt",
+            "price": 530000,
+            "img": "assets/shirt/temma shirt.png"
+        },
+        {
+            "id": "merch20",
+            "name": "Tokino Shirt",
+            "price": 370000,
+            "img": "assets/shirt/tokino shirt.png"
+        },
+        {
+            "id": "merch21",
+            "name": "Amelia Watson Shirt",
+            "price": 780000,
+            "img": "assets/shirt/watson shirt.png"
+        },
+        {
+            "id": "merch22",
+            "name": "Yukoku Roberu Shirt",
+            "price": 570000,
+            "img": "assets/shirt/yukoku shirt.png"
+        }
+    ],
+    "audio": [
+        {
+            "id": "merch23",
+            "name": "Umisea collaboration EN & JP",
+            "price": 765000,
+            "img": "assets/audio/audio 1.png"
+        },
+        {
+            "id": "merch24",
+            "name": "Hololive english myth",
+            "price": 675000,
+            "img": "assets/audio/audio 2.png"
+        },
+        {
+            "id": "merch25",
+            "name": "Set ready hololive",
+            "price": 500000,
+            "img": "assets/audio/audio 3.png"
+        },
+        {
+            "id": "merch26",
+            "name": "Mori Calliope's EP Your Mori",
+            "price": 645000,
+            "img": "assets/audio/audio 4.png"
+        },
+        {
+            "id": "merch27",
+            "name": "Yukihana Lammy Discography",
+            "price": 875000,
+            "img": "assets/audio/audio 5.png"
+        },
+        {
+            "id": "merch28",
+            "name": "Tsunomaki Watame original",
+            "price": 825000,
+            "img": "assets/audio/audio 6.png"
+        },
+        {
+            "id": "merch29",
+            "name": "Shirogane Noel ASMR",
+            "price": 635000,
+            "img": "assets/audio/audio 7.png"
+        },
+        {
+            "id": "merch30",
+            "name": "Nakiri Ayame Specials",
+            "price": 780000,
+            "img": "assets/audio/audio 8.png"
+        },
+        {
+            "id": "merch31",
+            "name": "Ookami Mio Anniversary",
+            "price": 1000000,
+            "img": "assets/audio/audio 9.png"
+        },
+        {
+            "id": "merch32",
+            "name": "Christmas special 2021",
+            "price": 950000,
+            "img": "assets/audio/audio 10.png"
+        },
+        {
+            "id": "merch33",
+            "name": "Tokoyami Towa's 1st EP Scream",
+            "price": 875000,
+            "img": "/assets/audio/audio 11.png"
+        },
+        {
+            "id": "merch34",
+            "name": "Halloween Boys 2021",
+            "price": 1100000,
+            "img": "assets/audio/audio 12.png"
+        }
+    ]
+}
