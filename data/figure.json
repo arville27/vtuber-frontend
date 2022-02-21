@@ -3,70 +3,70 @@
         "id": "figure1",
         "name": "Tokino Sora",
         "img": "assets/figure/Tokino_Sora.jpg",
-        "type": "nendoroid",
+        "type": "Nendoroid",
         "price": 1450000
     },
     {
         "id": "figure2",
         "name": "Akai Haato",
         "img": "assets/figure/Akai_Hato.jpg",
-        "type": "nendoroid",
+        "type": "Nendoroid",
         "price": 975000
     },
     {
         "id": "figure3",
         "name": "Kagura Nana",
         "img": "assets/figure/Kagura_Nana.jpg",
-        "type": "nendoroid",
+        "type": "Nendoroid",
         "price": 950000
     },
     {
         "id": "figure4",
         "name": "Shirakami Fubuki",
         "img": "assets/figure/Shirakami_Fubuki.jpg",
-        "type": "nendoroid",
+        "type": "Nendoroid",
         "price": 750000
     },
     {
         "id": "figure5",
         "name": "Nekomata Okayu",
         "img": "assets/figure/Nekomata_Okayu.jpg",
-        "type": "figure",
+        "type": "Figure",
         "price": 1200000
     },
     {
         "id": "figure6",
         "name": "Uruha Rushia",
         "img": "assets/figure/Uruha_Rushia.jpg",
-        "type": "nendoroid",
+        "type": "Nendoroid",
         "price": 1500000
     },
     {
         "id": "figure7",
         "name": "Oozora Subaru",
         "img": "assets/figure/Oozora_Subaru.jpg",
-        "type": "nendoroid",
+        "type": "Nendoroid",
         "price": 800000
     },
     {
         "id": "figure8",
         "name": "Minato Aqua",
         "img": "assets/figure/Minato_Aqua.jpg",
-        "type": "nendoroid",
+        "type": "Nendoroid",
         "price": 945000
     },
     {
         "id": "figure9",
         "name": "Natsuiro Matsuri",
         "img": "assets/figure/Hatsuiro_Matsuri.jpg",
-        "type": "nendoroid",
+        "type": "Nendoroid",
         "price": 1125000
     },
     {
         "id": "figure10",
         "name": "Houshou Marine",
         "img": "assets/figure/Hoshou_Marine.jpg",
-        "type": "nendoroid",
+        "type": "Nendoroid",
         "price": 450000
     }
 ]
