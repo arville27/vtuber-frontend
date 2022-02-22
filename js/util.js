@@ -8,17 +8,13 @@ const Type = Object.freeze({
  *
  * @param {String} name Talent name
  * @param {String} img Image Path
- * @param {Object[]} extraChildren Extra children to add to DOM
  */
-function generateCard(name, img, extraChildren = []) {
+function generateCardTalent(name, img) {
     const card = $('<div>', { class: 'card' });
     const pictContainer = $('<div>', { class: 'card-pict-container' });
     pictContainer.append($('<img>', { class: 'card-pict', src: img }));
     $(card).append(pictContainer);
     $(card).append($('<div>', { class: 'card-details' }).text(name));
-    if (extraChildren.length > 0) {
-        extraChildren.forEach((element) => $(card).append(element.clone()));
-    }
     return card;
 }
 
@@ -108,4 +104,22 @@ async function getData(type) {
     return await data.json();
 }
 
-export { Type, generateCartItem, numToPrice, generateCard, getUserCart, getData };
+function generateCard({ name, img, type, price, id }, callback) {
+    const parent = `
+    <div class="card">
+    <div class="card-pict-container">
+        <img class="card-pict" src="${img}" alt="${name}" />
+    </div>
+    <div class="card-details">
+        <div class="item-name">${name}</div>
+        <div class="item-type">${type}</div>
+        <div class="item-price">${numToPrice(price)}</div>
+    </div>
+    </div>`;
+
+    const cart = $(`<div data="${id}" class="material-icons card-carticon">shopping_cart</div>`);
+    cart.click(callback);
+    return $(parent).append(cart);
+}
+
+export { Type, generateCartItem, numToPrice, generateCard, getUserCart, getData, generateCardTalent };

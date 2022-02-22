@@ -53,6 +53,10 @@
     flex-direction: column;
 }
 
+.harga .item-price {
+    display: none;
+}
+
 .item-name {
     font-weight: 600;
     font-size: 1.3rem;
@@ -64,17 +68,22 @@
     font-size: 1.2rem;
 }
 
+.item-count {
+    padding-top: 0.25em;
+}
+
 .additem-btn,
 .subitem-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-green);
+    background-color: rgb(181, 247, 239);
     aspect-ratio: 1;
-    width: 2.2rem;
-    font-weight: bold;
+    /* width: 2rem; */
+    /* font-weight: bold; */
     cursor: pointer;
     border-radius: 3px;
+    padding: 0.1em 0.6em;
 }
 
 .cart-details-2 {
@@ -89,9 +98,37 @@
 }
 
 .cart-total {
-    background-color: var(--color-green);
+    background-color: rgb(181, 247, 239);
     border-radius: 10px;
     padding: 0.3em 1em;
+}
+
+/* total checkout */
+.total-cart-container {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--color-green);
+    padding: 1.3em 3em;
+    justify-content: space-between;
+}
+
+.total-left {
+    font-size: 1.8rem;
+    display: flex;
+    gap: 5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.checkout-button {
+    padding: 0.5em 3em;
+    background-color: rgb(182, 208, 255);
+    border-radius: 50px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 1.5em;
 }
 
 @media (max-width: 700px) {
@@ -108,7 +145,7 @@
     }
 
     .item-name {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .item-type {
@@ -117,7 +154,7 @@
 
     .item-details-2 {
         gap: 1.1rem;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .additem-btn,
@@ -125,8 +162,26 @@
         width: 1.5rem;
     }
 
-    .cart-details-2 {
+    .total-left {
+        font-size: 1.2rem;
+    }
+
+    .total-cart-container {
+        padding-inline: 1.2em;
+    }
+
+    .checkout-button {
         font-size: 1rem;
-        padding-inline: 1rem;
+    }
+    .cart-details-1 {
+        gap: 0.5rem;
+    }
+    .cart-details-2 {
+        display: none;
+    }
+
+    .harga .item-price {
+        display: block;
+        /* background-color: black; */
     }
 }

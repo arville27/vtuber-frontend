@@ -1,26 +1,6 @@
-// import { generateCard } from './util.js';
+import { Type, getData, generateCard } from './util.js';
 
-const data = await fetch('/data/merch.json');
-const merchs = await data.json();
-
-function numberToStringPrice(num) {
-    return num.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
-}
-
-function generateCard(id, name, type, price, img) {
-    return `
-    <div class="card">
-    <div class="card-pict-container">
-        <img class="card-pict" src="${img}" alt="${name}" />
-    </div>
-    <div class="card-details">
-        <div class="item-name">${name}</div>
-        <div class="item-type">${type}</div>
-        <div class="item-price">${price}</div>
-    </div>
-    <div data="${id}" class="material-icons card-carticon">shopping_cart</div>
-    </div>`;
-}
+const merchs = await getData(Type.Merch);
 
 $('.card-container').empty();
 for (const key in merchs) {
@@ -31,13 +11,11 @@ for (const key in merchs) {
 function filterTab(key) {
     merchs[key].forEach((element) => {
         $('.card-container').append(
-            generateCard(
-                element.id,
-                element.name,
-                key,
-                numberToStringPrice(parseInt(element.price)),
-                element.img
-            )
+            generateCard(element, (event) => {
+                let cart_obj = $(event.target).attr('data');
+                window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
+                alert('Item Successfully Added!');
+            })
         );
     });
 }
@@ -54,13 +32,6 @@ $('.tab-item').click((e) => {
     $('.active-tab').toggleClass('active-tab');
     $(e.target).toggleClass('active-tab');
     $('#searchbar').val('');
-});
-
-//Add to Cart
-$('.card-carticon').click((event) => {
-    let cart_obj = $(event.target).attr('data');
-    window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
-    alert('Item Successfully Added!');
 });
 
 //Search
@@ -93,13 +64,11 @@ function searchTab(search_object, currTab) {
         })
         .forEach((element) => {
             $('.card-container').append(
-                generateCard(
-                    element.id,
-                    element.name,
-                    currTab,
-                    numberToStringPrice(parseInt(element.price)),
-                    element.img
-                )
+                generateCard(element, (event) => {
+                    let cart_obj = $(event.target).attr('data');
+                    window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
+                    alert('Item Successfully Added!');
+                })
             );
         });
 }

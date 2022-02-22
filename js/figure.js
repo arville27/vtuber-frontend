@@ -1,46 +1,17 @@
-// import { generateCard } from './util.js';
+import { generateCard, getData, Type } from './util.js';
 
-const data = await fetch('/data/figure.json');
-const figures = await data.json();
-
-function numberToStringPrice(num) {
-    return num.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
-}
-
-function generateCard(id, name, type, price, img) {
-    return `
-    <div class="card">
-    <div class="card-pict-container">
-        <img class="card-pict" src="${img}" alt="${name}" />
-    </div>
-    <div class="card-details">
-        <div class="item-name">${name}</div>
-        <div class="item-type">${type}</div>
-        <div class="item-price">${price}</div>
-    </div>
-    <div data="${id}" class="material-icons card-carticon">shopping_cart</div>
-    </div>`;
-}
+const figures = await getData(Type.Figures);
 
 $('.card-container').empty();
 
 figures.forEach((figure) => {
     $('.card-container').append(
-        generateCard(
-            figure.id,
-            figure.name,
-            figure.type,
-            numberToStringPrice(parseInt(figure.price)),
-            figure.img
-        )
+        generateCard(figure, (event) => {
+            let cart_obj = $(event.target).attr('data');
+            window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
+            alert('Item Successfully Added!');
+        })
     );
-});
-
-//Add to Cart
-$('.card-carticon').click((event) => {
-    let cart_obj = $(event.target).attr('data');
-    window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
-    alert('Item Successfully Added!');
 });
 
 //Search
@@ -54,13 +25,11 @@ $('.search-closeicon').click((e) => {
     $('.card-container').empty();
     figures.forEach((figure) => {
         $('.card-container').append(
-            generateCard(
-                figure.id,
-                figure.name,
-                figure.type,
-                numberToStringPrice(parseInt(figure.price)),
-                figure.img
-            )
+            generateCard(figure, (event) => {
+                let cart_obj = $(event.target).attr('data');
+                window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
+                alert('Item Successfully Added!');
+            })
         );
     });
 });
@@ -82,13 +51,11 @@ $('#searchbar').on('input', function (e) {
     figures.forEach((figure) => {
         if (figure.name.toLowerCase().includes(search_object)) {
             $('.card-container').append(
-                generateCard(
-                    figure.id,
-                    figure.name,
-                    figure.type,
-                    numberToStringPrice(parseInt(figure.price)),
-                    figure.img
-                )
+                generateCard(figure, (event) => {
+                    let cart_obj = $(event.target).attr('data');
+                    window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
+                    alert('Item Successfully Added!');
+                })
             );
         }
     });

@@ -3,6 +3,13 @@ const navigation = $('#navigation');
 const navToggle = $('#mobile-menu-toggle');
 const merchandise = $('#navigation li:nth(3)');
 const dropDownMenu = $('.dropdown-menu-container');
+const dropDownTab = $('.dropdown-tab');
+
+// dropDownTab.click((e) => {
+//     e.preventDefault();
+//     const target = $(e.target).attr('tab');
+//     console.log(target);
+// });
 
 navToggle.click(() => {
     const status = navigation.attr('data-visible');

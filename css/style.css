@@ -37,7 +37,7 @@ body {
     align-items: center;
     background-color: var(--color-dark);
     width: 100%;
-    position: fixed;
+    position: sticky;
     z-index: 1000;
     transition: background-color 250ms linear;
 }
