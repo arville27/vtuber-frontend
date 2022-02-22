@@ -30,15 +30,18 @@ body {
 }
 
 /* Header */
-.navigation-parent-container {
+.header {
     top: 0;
+    position: sticky;
+    z-index: 1000000000;
+}
+
+.navigation-parent-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-dark);
     width: 100%;
-    position: sticky;
-    z-index: 1000;
     transition: background-color 250ms linear;
 }
 
@@ -154,6 +157,7 @@ body {
         background-color: var(--color-neutral);
         transform: translateX(-100%);
         transition: transform 350ms ease-out;
+        /* transition: transform 350ms; */
     }
 
     .navigation a {

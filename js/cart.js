@@ -33,3 +33,24 @@ $('.additem-btn, .subitem-btn').click((e) => {
         domCounter.text(parseInt(domCounter.text()) - 1);
     }
 });
+
+//validasi form
+if (name.value == '') {
+    alert('username must be filled');
+} else if (!femaleBtn.checked && !maleBtn.checked) {
+    alert('you must select your gender');
+} else if (email.value == '') {
+    alert('email must be filled');
+} else if (phone.value == '') {
+    alert('phone number must be filled');
+} else if (address.value == '') {
+    alert('address must be filled');
+} else if (username.value.length < 3) {
+    alert('username must be at least 3 characters');
+} else if (!email.value.endsWith('@gmail.com')) {
+    alert('Email not valid');
+} else if (!phonenumber.startsWith('+81') && phonenumber.value.length != 11) {
+    alert('Phone number not valid');
+} else if (!address.value.endsWith('Street')) {
+    alert('Address not valid');
+}

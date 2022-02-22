@@ -104,7 +104,7 @@ async function getData(type) {
     return await data.json();
 }
 
-function generateCard({ name, img, type, price, id }, callback) {
+function generateCard({ name, img, type, price, id }) {
     const parent = `
     <div class="card">
     <div class="card-pict-container">
@@ -118,7 +118,11 @@ function generateCard({ name, img, type, price, id }, callback) {
     </div>`;
 
     const cart = $(`<div data="${id}" class="material-icons card-carticon">shopping_cart</div>`);
-    cart.click(callback);
+    cart.click((event) => {
+        let cart_obj = $(event.target).attr('data');
+        window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
+        alert('Item Successfully Added!');
+    });
     return $(parent).append(cart);
 }
 

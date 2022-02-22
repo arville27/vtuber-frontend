@@ -5,13 +5,7 @@ const figures = await getData(Type.Figures);
 $('.card-container').empty();
 
 figures.forEach((figure) => {
-    $('.card-container').append(
-        generateCard(figure, (event) => {
-            let cart_obj = $(event.target).attr('data');
-            window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
-            alert('Item Successfully Added!');
-        })
-    );
+    $('.card-container').append(generateCard(figure));
 });
 
 //Search
@@ -24,13 +18,7 @@ $('.search-closeicon').click((e) => {
 
     $('.card-container').empty();
     figures.forEach((figure) => {
-        $('.card-container').append(
-            generateCard(figure, (event) => {
-                let cart_obj = $(event.target).attr('data');
-                window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
-                alert('Item Successfully Added!');
-            })
-        );
+        $('.card-container').append(generateCard(figure));
     });
 });
 
@@ -50,13 +38,7 @@ $('#searchbar').on('input', function (e) {
     let search_object = $(e.target).val().toLowerCase();
     figures.forEach((figure) => {
         if (figure.name.toLowerCase().includes(search_object)) {
-            $('.card-container').append(
-                generateCard(figure, (event) => {
-                    let cart_obj = $(event.target).attr('data');
-                    window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
-                    alert('Item Successfully Added!');
-                })
-            );
+            $('.card-container').append(generateCard(figure));
         }
     });
 });

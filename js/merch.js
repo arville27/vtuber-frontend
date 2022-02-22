@@ -10,13 +10,7 @@ for (const key in merchs) {
 //all
 function filterTab(key) {
     merchs[key].forEach((element) => {
-        $('.card-container').append(
-            generateCard(element, (event) => {
-                let cart_obj = $(event.target).attr('data');
-                window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
-                alert('Item Successfully Added!');
-            })
-        );
+        $('.card-container').append(generateCard(element));
     });
 }
 
@@ -63,13 +57,7 @@ function searchTab(search_object, currTab) {
             }
         })
         .forEach((element) => {
-            $('.card-container').append(
-                generateCard(element, (event) => {
-                    let cart_obj = $(event.target).attr('data');
-                    window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
-                    alert('Item Successfully Added!');
-                })
-            );
+            $('.card-container').append(generateCard(element));
         });
 }
 

@@ -4,7 +4,7 @@
 
 /* Content Be Part Of Us*/
 .bepartofus {
-    padding: 6.5rem 3em 3.5em;
+    padding: 1rem 3em 3.5em;
     background-color: var(--color-dark);
     display: flex;
     flex-direction: row;
