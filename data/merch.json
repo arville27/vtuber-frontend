@@ -162,7 +162,7 @@
             "id": "merch23",
             "name": "Umisea collaboration EN & JP",
             "price": 765000,
-            "type": "audio",
+            "type": "Audio",
             "img": "assets/audio/audio 1.png"
         },
         {
