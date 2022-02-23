@@ -101,7 +101,9 @@ function generateCard({ name, img, type, price, id }) {
     card.append(pictContainer).append(details);
     // Price is define then its item (merch, figure)
     if (price) {
-        const cart = $('<div>', { data: id, class: 'material-icons card-carticon' }).text('shopping_cart');
+        const cart = $('<div>', { class: 'material-icons card-carticon' })
+            .attr('data', id)
+            .text('shopping_cart');
         cart.click((event) => {
             let cart_obj = $(event.target).attr('data');
             console.log(cart_obj);
