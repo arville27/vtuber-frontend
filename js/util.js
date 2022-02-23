@@ -5,20 +5,6 @@ const Type = Object.freeze({
 });
 
 /**
- *
- * @param {String} name Talent name
- * @param {String} img Image Path
- */
-function generateCardTalent(name, img) {
-    const card = $('<div>', { class: 'card' });
-    const pictContainer = $('<div>', { class: 'card-pict-container' });
-    pictContainer.append($('<img>', { class: 'card-pict', src: img }));
-    $(card).append(pictContainer);
-    $(card).append($('<div>', { class: 'card-details' }).text(name));
-    return card;
-}
-
-/**
  * @param {{name: string, img: string, type: string, price: Number}} item
  * @param {Number} count item count
  * @returns
@@ -105,25 +91,33 @@ async function getData(type) {
 }
 
 function generateCard({ name, img, type, price, id }) {
-    const parent = `
-    <div class="card">
-    <div class="card-pict-container">
-        <img class="card-pict" src="${img}" alt="${name}" />
-    </div>
-    <div class="card-details">
-        <div class="item-name">${name}</div>
-        <div class="item-type">${type}</div>
-        <div class="item-price">${numToPrice(price)}</div>
-    </div>
-    </div>`;
+    let card = $('<div>', { class: 'card' });
 
-    const cart = $(`<div data="${id}" class="material-icons card-carticon">shopping_cart</div>`);
-    cart.click((event) => {
-        let cart_obj = $(event.target).attr('data');
-        window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
-        alert('Item Successfully Added!');
-    });
-    return $(parent).append(cart);
+    const pictContainer = $('<div>', { class: 'card-pict-container' });
+    pictContainer.append($('<img>', { class: 'card-pict', src: img, alt: `${name}` }));
+
+    const details = $('<div>', { class: 'card-details' });
+
+    card.append(pictContainer).append(details);
+    // Price is define then its item (merch, figure)
+    if (price) {
+        const cart = $('<div>', { data: id, class: 'material-icons card-carticon' }).text('shopping_cart');
+        cart.click((event) => {
+            let cart_obj = $(event.target).attr('data');
+            console.log(cart_obj);
+            // window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
+            // alert('Item Successfully Added!');
+        });
+        card = card.append(cart);
+        details
+            .append($('<div>', { class: 'item-name' }).text(name))
+            .append($('<div>', { class: 'item-type' }).text(type))
+            .append($('<div>', { class: 'item-price' }).text(numToPrice(price)));
+    } else {
+        details.text(name);
+    }
+
+    return card;
 }
 
-export { Type, generateCartItem, numToPrice, generateCard, getUserCart, getData, generateCardTalent };
+export { Type, generateCartItem, numToPrice, generateCard, getUserCart, getData };
