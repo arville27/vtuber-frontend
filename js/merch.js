@@ -39,7 +39,7 @@ function resetSearchbarIcon() {
 }
 
 // Default action
-const merchTab = localStorage.getItem('merch-tab');
+const merchTab = localStorage.getItem('merch-tab') ?? 'all';
 filterTab(merchTab);
 switchTabIndicator(merchTab);
 localStorage.setItem('merch-tab', 'all');
