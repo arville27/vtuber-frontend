@@ -1,23 +1,25 @@
-import { generateCard } from './util.js';
+import { generateCard, getData, Type } from './util.js';
 
-const data = await fetch('/data/talent.json');
-const talents = await data.json();
+const talents = await getData(Type.Talent);
+
+const talentContainer = $('.card-container');
 
 const allTalents = [];
 for (const nation in talents) {
     allTalents.push(...talents[nation].talents);
 }
 
-$('.card-container').empty();
+talentContainer.empty().append(allTalents.map((talent) => generateCard(talent)));
 
-$('.card-container').append(allTalents.map((talent) => generateCard(talent)));
-
-$('select').change(() => {
+$('select').on('change', () => {
     const gen = parseInt($('select#generation').val());
     const nation = $('select#nationality').val();
-    $('.card-container').empty();
     const listTalents = nation === 'all' ? allTalents : talents[nation].talents;
-    $('.card-container').append(
-        listTalents.filter((talent) => gen === 0 || talent.gen === gen).map((talent) => generateCard(talent))
-    );
+    talentContainer
+        .empty()
+        .append(
+            listTalents
+                .filter((talent) => gen === 0 || talent.gen === gen)
+                .map((talent) => generateCard(talent))
+        );
 });
