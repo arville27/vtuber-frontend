@@ -1,4 +1,4 @@
-import { generateCartItem, getUserCart, numToPrice } from './util.js';
+import { generateCartItem, getUserCart, numToPrice, noCartItems } from './util.js';
 
 const container = $('.mycart-container');
 const popup = $('.popup-container');
@@ -62,8 +62,11 @@ function validateForm() {
  * Generate user's cart with new value
  */
 function generateCartItems(customCart = null) {
-    let totalPrice = 0;
     let userCart = customCart ?? getUserCart();
+    if (userCart.length === 0) {
+        setTotalPrice(0);
+        return container.empty().append(noCartItems());
+    }
     container.empty().append(userCart.map((item) => generateCartItem(item)));
     // cart item button handler
     $('.additem-btn, .subitem-btn').click((e) => {
@@ -94,6 +97,7 @@ function generateCartItems(customCart = null) {
             }, 0)
         );
     });
+
     setTotalPrice(0);
 }
 

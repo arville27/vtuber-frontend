@@ -137,4 +137,27 @@ function generateCard({ name, img, type, price, id }) {
     return card;
 }
 
-export { Type, generateCartItem, numToPrice, generateCard, getUserCart, getData };
+function noCartItems() {
+    const container = $('<div>', { class: 'warning-container' });
+
+    const card = $('<div>', { class: 'warning-card' });
+    card.append($('<span>', { class: 'material-icons shoppingbag-icons' }).text('shopping_bag'))
+        .append($('<span>', { class: 'warning' }).text('There is no item in your cart'))
+        .append(
+            $('<div>', { class: 'shop-btn-container' })
+                .append(
+                    $('<button>', { class: 'shop-btn figures-btn' })
+                        .text('Figures')
+                        .click(() => window.open('/figure.html', '_'))
+                )
+                .append(
+                    $('<button>', { class: 'shop-btn merch-btn' })
+                        .text('Merchandise')
+                        .click(() => window.open('/merch.html', '_'))
+                )
+        );
+
+    return container.append(card);
+}
+
+export { Type, generateCartItem, numToPrice, generateCard, getUserCart, getData, noCartItems };
