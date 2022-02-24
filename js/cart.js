@@ -74,7 +74,10 @@ function generateCartItems(customCart = null) {
         const itemId = $(e.target).parent().attr('data-id');
         const item = userCart.find((i) => i.id === itemId);
         buttonName === 'additem-btn' ? item.count++ : item.count--;
-        if (item.count === 0) userCart = userCart.filter((i) => i.id !== item.id);
+        if (item.count === 0) {
+            userCart = userCart.filter((i) => i.id !== item.id);
+            $('.deleteicon').hide();
+        }
         setUserCart(userCart);
         generateCartItems();
     });
