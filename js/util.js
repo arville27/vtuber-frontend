@@ -4,16 +4,20 @@ const Type = Object.freeze({
     Merch: 2,
 });
 
+const [figures, merch] = [await getData(Type.Figures), await getData(Type.Merch)];
+
 /**
  * @param {{name: string, img: string, type: string, price: Number}} item
  * @param {Number} count item count
- * @returns
+ * @returns return new jQuery object
  */
-function generateCartItem({ name, img, type, price }, count) {
+function generateCartItem({ name, img, type, id, price, count }) {
     const parent = $('<div>', { class: 'cart-item-container' });
 
     const checkboxContainer = $('<div>', { class: 'cart-checkbox-container' });
-    checkboxContainer.append($('<input>', { class: 'cart-checkbox', type: 'checkbox' }));
+    checkboxContainer
+        .attr({ 'data-id': id, 'data-check': false })
+        .append($('<input>', { class: 'cart-checkbox', type: 'checkbox' }));
 
     const cartPictContainer = $('<div>', { class: 'cart-pict-container' });
     cartPictContainer.append($('<img>', { class: 'cart-pict', src: img, alt: `Image of ${name}` }));
@@ -25,7 +29,11 @@ function generateCartItem({ name, img, type, price }, count) {
             .append($('<div>', { class: 'item-type' }).text(type))
     );
     firstCartDetails.append(
+        $('<div>', { class: 'harga' }).append($('<div>', { class: 'item-price' }).text(numToPrice(price)))
+    );
+    firstCartDetails.append(
         $('<div>', { class: 'item-details-2' })
+            .attr('data-id', id)
             .append($('<span>', { class: 'subitem-btn' }).text('-'))
             .append($('<div>', { class: 'item-count' }).text(count))
             .append($('<span>', { class: 'additem-btn' }).text('+'))
@@ -53,15 +61,10 @@ function numToPrice(num) {
 }
 
 /**
- * @returns Array of merch/figure id
+ * @returns Array of obj {merch/figure id, count}
  */
 function getUserCart() {
-    const cartObject = { ...window.localStorage };
-    const cart = [];
-    for (const obj in cartObject) {
-        cart.push(cartObject[obj]);
-    }
-    return cart;
+    return JSON.parse(localStorage.getItem('cart') ?? '[]');
 }
 
 /**
@@ -90,6 +93,11 @@ async function getData(type) {
     return await data.json();
 }
 
+/**
+ *
+ * @param {{name: string, img: string, type: string, price: Number, id: string}} Item
+ * @returns return new jQuery object
+ */
 function generateCard({ name, img, type, price, id }) {
     let card = $('<div>', { class: 'card' });
 
@@ -99,17 +107,24 @@ function generateCard({ name, img, type, price, id }) {
     const details = $('<div>', { class: 'card-details' });
 
     card.append(pictContainer).append(details);
-    // Price is define then its item (merch, figure)
+    // Price is define then its item (merch, figure) else its talent
     if (price) {
         const cart = $('<div>', { class: 'material-icons card-carticon' })
-            .attr('data', id)
-            .text('shopping_cart');
-        cart.click((event) => {
-            let cart_obj = $(event.target).attr('data');
-            console.log(cart_obj);
-            // window.localStorage.setItem(`${window.localStorage.length}`, cart_obj);
-            // alert('Item Successfully Added!');
-        });
+            .attr({ 'data-id': id, 'data-type': type.toLowerCase() })
+            .text('shopping_cart')
+            .on('click', (event) => {
+                let itemId = $(event.target).attr('data-id');
+                let itemType = $(event.target).attr('data-type');
+                let item;
+                if (['shirt', 'poster', 'audio'].includes(itemType))
+                    item = merch[itemType].find((i) => i.id === itemId);
+                else item = figures.find((i) => i.id === itemId);
+                const userCart = getUserCart();
+                const itemInCart = userCart.find((i) => i.id === item.id);
+                itemInCart ? itemInCart.count++ : userCart.push({ ...item, count: 1 });
+                localStorage.setItem('cart', JSON.stringify(userCart));
+                alert('Item Successfully Added!');
+            });
         card = card.append(cart);
         details
             .append($('<div>', { class: 'item-name' }).text(name))
