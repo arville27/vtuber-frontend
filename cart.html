@@ -83,8 +83,11 @@
 
             <div class="popup-container">
                 <div class="popup">
-                    <div class="form">
-                        <form>
+                    <div class="form-img-container">
+                        <img class="form-img" src="/assets/Logo.png" alt="Logo" />
+                    </div>
+                    <div class="form-container">
+                        <form class="form">
                             <label for="name">Name</label> <br />
                             <input type="text" name="name" id="name" />
                             <br />
@@ -99,23 +102,19 @@
                             <br />
 
                             <label for="phone">Phone Number</label> <br />
-                            <input type="number" name="phone" id="phone" />
+                            <input type="tel" name="phone" id="phone" />
                             <br />
 
                             <label for="address">Address</label> <br />
                             <textarea name="address" id="address" cols="30" rows="10"></textarea>
                             <br />
                         </form>
-                        <div class="form-img-container">
-                            <img class="form-img" src="/assets/Logo.png" alt="Logo" />
-                        </div>
                         <span class="material-icons close-icon"> close </span>
                     </div>
-                    <div class="popup-button-submit">
-                        <button class="submit">Buy</button>
-                    </div>
+                    <button id="buy" class="submit">Buy</button>
                 </div>
             </div>
+            <span class="material-icons deleteicon"> delete </span>
         </content>
 
         <footer class="footer">
