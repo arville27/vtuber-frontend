@@ -91,5 +91,189 @@
                 "gen": 2
             }
         ]
+    },
+    "jp": {
+        "talents": [
+            {
+                "name": "Aki Rosenthal",
+                "img": "assets/jp/aki.webp",
+                "gen": 1
+            },
+            {
+                "name": "Minato Aqua",
+                "img": "assets/jp/aqua.webp",
+                "gen": 2
+            },
+            {
+                "name": "Nakiri Ayame",
+                "img": "assets/jp/ayame.webp",
+                "gen": 2
+            },
+            {
+                "name": "Shishiro Botan",
+                "img": "assets/jp/botan.webp",
+                "gen": 5
+            },
+            {
+                "name": "Sakamata Chloe",
+                "img": "assets/jp/chloe.webp",
+                "gen": 6
+            },
+            {
+                "name": "Yuzuki Choco",
+                "img": "assets/jp/choco.webp",
+                "gen": 2
+            },
+            {
+                "name": "Kiryu Coco",
+                "img": "assets/jp/coco.webp",
+                "gen": 4
+            },
+            {
+                "name": "Shiranui Flare",
+                "img": "assets/jp/flare.webp",
+                "gen": 3
+            },
+            {
+                "name": "Shirakami Fubuki",
+                "img": "assets/jp/fubuki.webp",
+                "gen": 1
+            },
+            {
+                "name": "Akai Haato",
+                "img": "assets/jp/haato.webp",
+                "gen": 1
+            },
+            {
+                "name": "Kazama Iroha",
+                "img": "assets/jp/iroha.webp",
+                "gen": 6
+            },
+            {
+                "name": "Amane Kanata",
+                "img": "assets/jp/kanata.webp",
+                "gen": 4
+            },
+            {
+                "name": "Inugami Korone",
+                "img": "assets/jp/korone.webp",
+                "gen": "gamers"
+            },
+            {
+                "name": "Hakui Koyori",
+                "img": "assets/jp/koyori.webp",
+                "gen": 6
+            },
+            {
+                "name": "Yukihana Lamy",
+                "img": "assets/jp/lamy.webp",
+                "gen": 5
+            },
+            {
+                "name": "La + Darkness",
+                "img": "assets/jp/laplus.webp",
+                "gen": 6
+            },
+            {
+                "name": "Takane Lui",
+                "img": "assets/jp/lui.webp",
+                "gen": 6
+            },
+            {
+                "name": "Hinemori Luna",
+                "img": "assets/jp/luna.webp",
+                "gen": 4
+            },
+            {
+                "name": "Hoshou Marine",
+                "img": "assets/jp/marine.webp",
+                "gen": 3
+            },
+            {
+                "name": "Natsuiro Matsui",
+                "img": "assets/jp/matsuri.webp",
+                "gen": 1
+            },
+            {
+                "name": "Yozora Mel",
+                "img": "assets/jp/mel.webp",
+                "gen": 1
+            },
+            {
+                "name": "Sakura Miko",
+                "img": "assets/jp/miko.webp",
+                "gen": 1
+            },
+            {
+                "name": "Ookami Mio",
+                "img": "assets/jp/mio.webp",
+                "gen": "gamers"
+            },
+            {
+                "name": "Momosuzu Nene",
+                "img": "assets/jp/nene.webp",
+                "gen": 5
+            },
+            {
+                "name": "Shirogane Noel",
+                "img": "assets/jp/noel.webp",
+                "gen": 3
+            },
+            {
+                "name": "Nekomata Okayu",
+                "img": "assets/jp/okayu.webp",
+                "gen": "gamers"
+            },
+            {
+                "name": "Usada Pekora",
+                "img": "assets/jp/pekora.webp",
+                "gen": 3
+            },
+            {
+                "name": "Omaru Polka",
+                "img": "assets/jp/polka.webp",
+                "gen": 5
+            },
+            {
+                "name": "Robocosan",
+                "img": "assets/jp/roboco.webp",
+                "gen": 1
+            },
+            {
+                "name": "Uruha Rushia",
+                "img": "assets/jp/rushia.webp",
+                "gen": 3
+            },
+            {
+                "name": "Murasaki Shion",
+                "img": "assets/jp/shion.webp",
+                "gen": 2
+            },
+            {
+                "name": "Tokino Sora",
+                "img": "assets/jp/sora.webp",
+                "gen": 1
+            },
+            {
+                "name": "Oozora Subaru",
+                "img": "assets/jp/subaru.webp",
+                "gen": 2
+            },
+            {
+                "name": "Hoshimachi Suisei",
+                "img": "assets/jp/suisei.webp",
+                "gen": 1
+            },
+            {
+                "name": "Tokoyami Towa",
+                "img": "assets/jp/towa.webp",
+                "gen": 4
+            },
+            {
+                "name": "Tsunomaki Watame",
+                "img": "assets/jp/watame.webp",
+                "gen": 4
+            }
+        ]
     }
 }
