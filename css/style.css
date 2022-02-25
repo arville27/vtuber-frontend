@@ -1,9 +1,10 @@
 :root {
     --color-dark: #201f26;
     --color-neutral: #161616;
-    --color-white: white;
+    --color-white-1: aliceblue;
+    --color-white-2: white;
     --color-green: #68dfd4;
-    --color-blue: #4a85eb;
+    --color-blue: #49c8f1;
 }
 
 * {
@@ -25,7 +26,7 @@ body {
 
 /* Utility */
 .active {
-    color: #49c8f1 !important;
+    color: var(--color-blue) !important;
 }
 
 /* Header */
@@ -74,7 +75,7 @@ body {
     text-decoration: none;
     font-size: 1.1em;
     font-weight: bold;
-    color: white;
+    color: var(--color-white-2);
 }
 
 .dropdown-menu-container {
@@ -105,13 +106,13 @@ body {
     text-decoration: none;
     font-size: 1.1em;
     font-weight: bold;
-    color: white;
+    color: var(--color-white-2);
     width: 100%;
 }
 
 .dropdown-menu a:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--color-white-2);
+    color: var(--color-neutral);
     border-radius: 10px;
 }
 
@@ -171,7 +172,7 @@ body {
         cursor: pointer;
         z-index: 1001;
         font-size: 1.5em;
-        background-color: var(--color-white);
+        background-color: var(--color-white-2);
     }
 }
 
@@ -183,7 +184,7 @@ body {
     padding-block: 2rem;
     gap: 0.8rem;
     background-color: var(--color-dark);
-    color: var(--color-white);
+    color: var(--color-white-2);
 }
 
 .socmed-container {

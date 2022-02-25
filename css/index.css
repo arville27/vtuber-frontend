@@ -27,7 +27,7 @@
 }
 
 .desc-partofus {
-    color: white;
+    color: var(--color-white-2);
     font-size: 2vw;
     padding: 0.5em 0;
     text-align: center;
@@ -49,13 +49,12 @@
 
 .apply-here {
     padding: 0.8em;
-    color: #49c8f1;
+    color: var(--color-blue);
     font-size: 2.4vw;
     font-weight: bold;
     background: white;
     border-radius: 50px;
     border-style: none;
-    box-shadow: white;
     box-shadow: 2px 2px 5px white;
     cursor: pointer;
 }
@@ -101,7 +100,7 @@
 }
 
 .progress-text {
-    color: white;
+    color: var(--color-white-2);
     text-align: center;
     font-size: 1.5vw;
 }
@@ -119,7 +118,7 @@
 }
 
 .title-our-activity {
-    color: white;
+    color: var(--color-white-2);
     font-weight: bold;
     font-size: 2rem;
 }
@@ -133,7 +132,7 @@
 
 .material-icons.video {
     z-index: 1;
-    color: black;
+    color: var(--color-neutral);
     margin: 0 2.5rem;
     background-color: rgba(255, 255, 255, 0.637);
     border-radius: 50%;
@@ -210,7 +209,7 @@
 
 .sale-percentage {
     font-size: 4vw;
-    background-color: #e7b87d;
+    background-color: var(--color-blue);
     border-radius: 50%;
     border: 5px solid white;
     text-align: center;
@@ -247,14 +246,14 @@
 }
 
 .tittle-about-us {
-    color: #68dfd4;
+    color: var(--color-blue);
     font-weight: bold;
     display: flex;
     font-size: 4vw;
 }
 
 .desc-about-us {
-    color: white;
+    color: var(--color-white-2);
     display: flex;
     align-items: center;
     justify-content: center;
