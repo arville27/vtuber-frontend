@@ -1,5 +1,6 @@
-import { generateCard, getData, Type } from './util.js';
+import { generateCard, getData, Type, noResultsFound } from './util.js';
 
+const noResultsContainer = $('.noresults-container');
 const figures = await getData(Type.Figures);
 const container = $('.card-container');
 $('.search-closeicon').css({ display: 'none', cursor: 'pointer' });
@@ -7,13 +8,14 @@ $('.search-closeicon').css({ display: 'none', cursor: 'pointer' });
 // Utility function for merch
 function generateResults(query = null) {
     const needFilter = !query;
-    container
-        .empty()
-        .append(
-            figures
-                .filter((figure) => needFilter || figure.name.toLowerCase().includes(query.toLowerCase()))
-                .map((figure) => generateCard(figure))
-        );
+    noResultsContainer.empty();
+    container.empty();
+    const filteredFigures = figures.filter(
+        (figure) => needFilter || figure.name.toLowerCase().includes(query.toLowerCase())
+    );
+
+    if (filteredFigures.length === 0) return noResultsContainer.append(noResultsFound());
+    container.append(filteredFigures.map((figure) => generateCard(figure)));
 }
 
 function resetSearchbarIcon() {
@@ -25,7 +27,7 @@ function resetSearchbarIcon() {
 // Default action
 generateResults();
 
-$('.search-closeicon').on('click', (e) => {
+$('.search-closeicon').on('click', () => {
     resetSearchbarIcon();
     generateResults();
 });

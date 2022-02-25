@@ -1,7 +1,8 @@
-import { Type, getData, generateCard } from './util.js';
+import { Type, getData, generateCard, noResultsFound } from './util.js';
 
 const merchs = await getData(Type.Merch);
 const container = $('.card-container');
+const noResultsContainer = $('.noresults-container');
 $('.search-closeicon').css({ display: 'none', cursor: 'pointer' });
 
 // Utility function for merch
@@ -23,13 +24,13 @@ function filterTab(key, query = null) {
     const listMerchs =
         key === 'all' ? [...merchs['poster'], ...merchs['shirt'], ...merchs['audio']] : merchs[key];
     const needFilter = !query;
-    container
-        .empty()
-        .append(
-            listMerchs
-                .filter((item) => needFilter || item.name.toLowerCase().includes(query.toLowerCase()))
-                .map((item) => generateCard(item))
-        );
+    const filteredTab = listMerchs.filter(
+        (item) => needFilter || item.name.toLowerCase().includes(query.toLowerCase())
+    );
+    container.empty();
+    noResultsContainer.empty();
+    if (filteredTab.length === 0) return noResultsContainer.append(noResultsFound());
+    container.append(filteredTab.map((item) => generateCard(item)));
 }
 
 function resetSearchbarIcon() {

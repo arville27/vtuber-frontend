@@ -27,11 +27,35 @@
     color: #434343;
 }
 
+/* No results */
+.noresults-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.noresults-emoji {
+    color: rgba(255, 255, 255, 70%);
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.noresults-message {
+    color: rgba(255, 255, 255, 90%);
+    font-size: 2.5rem;
+}
+
 /* Card card an */
 .parent-merch-container {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+}
+
+.merch-bg-container {
+    background-color: #49c8f1;
+    min-height: 60vh;
 }
 
 .merch-tab-container {
@@ -69,10 +93,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #49c8f1;
     padding: 2rem;
     gap: 3vh;
-    min-height: 60vh;
 }
 
 .card-container {
@@ -138,5 +160,14 @@
         width: 42vw;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+    }
+
+    /* No results */
+    .noresults-emoji {
+        font-size: 3rem;
+    }
+
+    .noresults-message {
+        font-size: 1.25rem;
     }
 }

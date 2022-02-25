@@ -160,4 +160,19 @@ function noCartItems() {
     return container.append(card);
 }
 
-export { Type, generateCartItem, numToPrice, generateCard, getUserCart, getData, noCartItems };
+function noResultsFound() {
+    return $('.noresults-container')
+        .append($('<div>', { class: 'noresults-emoji' }).text('o(> ω <)o'))
+        .append($('<div>', { class: 'noresults-message' }).text('No results found'));
+}
+
+export {
+    Type,
+    generateCartItem,
+    numToPrice,
+    generateCard,
+    getUserCart,
+    getData,
+    noCartItems,
+    noResultsFound,
+};
