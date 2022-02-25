@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* min-height: 10vh; */
 }
 
 input:focus,
@@ -157,7 +156,6 @@ body {
         background-color: var(--color-neutral);
         transform: translateX(-100%);
         transition: transform 350ms ease-out;
-        /* transition: transform 350ms; */
     }
 
     .navigation a {
