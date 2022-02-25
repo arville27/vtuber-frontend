@@ -54,7 +54,7 @@
     background: white;
     border-radius: 50px;
     border-style: none;
-    box-shadow: 2px 2px 5px white;
+    box-shadow: 2px 2px 8px rgba(179, 179, 179, 40%);
     cursor: pointer;
 }
 
@@ -95,7 +95,7 @@
     background: white;
     margin-bottom: 6px;
     font-size: 1.5vw;
-    box-shadow: 2px 2px 2px rgb(179, 179, 179);
+    box-shadow: 2px 2px 8px rgba(179, 179, 179, 40%);
 }
 
 .progress-text {
@@ -164,7 +164,7 @@
     border-radius: 25px;
     border: 5px solid var(--color-white-2);
     width: 60vw;
-    box-shadow: 5px 4px 12px;
+    box-shadow: 5px 4px 12px rgba(0, 0, 0, 60%);
 }
 
 .video-item:hover {
