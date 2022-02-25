@@ -51,12 +51,12 @@
     font-weight: 500;
     font-size: 1.1rem;
     cursor: pointer;
-    color: white;
+    color: var(--color-white-2);
 }
 
 .shoppingbag-icons {
     font-size: 4rem;
-    color: white;
+    color: var(--color-white-2);
     background-color: var(--color-blue);
     border-radius: 50%;
     padding: 0.4em;

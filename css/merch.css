@@ -107,11 +107,9 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    border: 2px 2px;
     background-color: var(--color-white-2);
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: 2vw black;
     position: relative;
 }
 
@@ -154,10 +152,7 @@
     }
 
     .card-pict {
-        background-size: cover;
         width: 42vw;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
     }
 
     /* No results */
