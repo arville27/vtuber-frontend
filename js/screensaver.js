@@ -2,7 +2,7 @@ const canvasContainer = $('.screensaver-container');
 const canvas = $('#canvas')[0];
 
 // Idle time in seconds
-let idleTime = 5;
+let idleTime = 120;
 
 // Default action
 init();
