@@ -46,7 +46,7 @@ function validateForm() {
     } else if (!email.val().endsWith('@gmail.com')) {
         return alert('Email not valid');
     } else if (phone.val() === '') {
-        alert('Phone number must be filled');
+        return alert('Phone number must be filled');
     } else if (!phone.val().startsWith('+62') && phone.val().length != 11) {
         return alert('Phone number not valid');
     } else if (address.val() === '') {
