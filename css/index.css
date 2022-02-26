@@ -47,12 +47,13 @@
 }
 
 .apply-here {
-    padding: 0.8em;
+    padding: 0.8em 1.2em;
     color: var(--color-blue);
     font-size: 2.4vw;
     font-weight: bold;
-    background: white;
-    border-radius: 50px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(223, 233, 243, 1) 100%);
+    border-radius: 65px;
     border-style: none;
     box-shadow: 2px 2px 8px rgba(179, 179, 179, 40%);
     cursor: pointer;
