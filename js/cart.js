@@ -43,11 +43,11 @@ function validateForm() {
         return alert('You must select your gender');
     } else if (email.val() === '') {
         return alert('Email must be filled');
-    } else if (!email.val().endsWith('@gmail.com')) {
+    } else if (!email.val().includes('@') || !email.val().endsWith('.com')) {
         return alert('Email not valid');
     } else if (phone.val() === '') {
         return alert('Phone number must be filled');
-    } else if (!phone.val().startsWith('+62') && phone.val().length != 11) {
+    } else if (!phone.val().startsWith('+81') || phone.val().length !== 14) {
         return alert('Phone number not valid');
     } else if (address.val() === '') {
         return alert('Address must be filled');
