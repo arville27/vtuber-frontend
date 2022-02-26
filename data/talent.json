@@ -155,11 +155,6 @@
                 "gen": 4
             },
             {
-                "name": "Inugami Korone",
-                "img": "assets/jp/korone.webp",
-                "gen": "gamers"
-            },
-            {
                 "name": "Hakui Koyori",
                 "img": "assets/jp/koyori.webp",
                 "gen": 6
@@ -205,11 +200,6 @@
                 "gen": 1
             },
             {
-                "name": "Ookami Mio",
-                "img": "assets/jp/mio.webp",
-                "gen": "gamers"
-            },
-            {
                 "name": "Momosuzu Nene",
                 "img": "assets/jp/nene.webp",
                 "gen": 5
@@ -218,11 +208,6 @@
                 "name": "Shirogane Noel",
                 "img": "assets/jp/noel.webp",
                 "gen": 3
-            },
-            {
-                "name": "Nekomata Okayu",
-                "img": "assets/jp/okayu.webp",
-                "gen": "gamers"
             },
             {
                 "name": "Usada Pekora",

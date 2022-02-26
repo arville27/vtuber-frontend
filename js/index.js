@@ -12,3 +12,5 @@ $('.material-icons.video').click((e) => {
         container.prepend(next);
     }
 });
+
+$('.apply-here').on('click', () => alert('Your registration is complete!'));
