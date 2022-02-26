@@ -43,7 +43,7 @@ function init() {
     let redrawInterval;
     let isActive = false;
 
-    $(window).on('mousemove', () => {
+    $(window).on('mousemove keyup click scroll', () => {
         clearTimeout(interactionTimeout);
         if (isActive) stopScreensaver();
         interactionTimeout = setTimeout(activateScreensaver, 1000 * idleTime);
