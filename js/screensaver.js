@@ -2,7 +2,7 @@ const canvasContainer = $('.screensaver-container');
 const canvas = $('#canvas')[0];
 
 // Idle time in seconds
-let idleTime = 120;
+let idleTime = 2;
 
 // Default action
 init();
@@ -61,5 +61,7 @@ function init() {
         ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
         redrawInterval = null;
         isActive = false;
+        x = 1;
+        y = 1;
     }
 }
